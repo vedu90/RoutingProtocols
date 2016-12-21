@@ -9,21 +9,21 @@ one. This is a little different from the original algorithm which immediately se
 information when routing table changes.
 
 The following commands can be specified at any point during the run of the server:
-- update <server-ID1> <server-ID2> <Link Cost>
+- update <server-ID1> <server-ID2> <Link Cost> : 
     server-ID1, server-ID2:The link for which the cost is being updated.
     Link Cost: It specifies the new link cost between the source and the destination server. Note that
     this command will be issued to both server-ID1and server-ID2 and involve them to update the
     cost and no other server.
-- step
+- step : 
     Send routing update to neighbors (triggered/force update)
-- packets
+- packets : 
     Display the number of distance vector packets this server has received since the last invocation of this
     information.
-- display
+- display : 
     Display the current routing table. And the table should be displayed in a sorted order from small ID to
     big.
-- disable<server-ID>
+- disable<server-ID> : 
     Disable the link to a given server. Doing this “closes” the connection to a given server with
     server-ID.
-- crash
+- crash : 
     Close all connections. This is to simulate server crashes.
